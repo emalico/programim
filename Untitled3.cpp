@@ -1,37 +1,24 @@
-#include<iostream>
-using namespace std;
-//me pa parameter me vlere
-/*int p(){
-
-int m;
- cout<<"vendos vlerat e pare "<<endl;
- cin>>m;
-int n;
- cout<<"vendos vlerat e dyte"<<endl;
- cin>>n;
-return m*n;
-}
-int main(){
- cout<<"vlerat tuaja jane "<<p( )<<endl;
-	return 0;
-}
-*/
-
-
 //me parameter me vlere
+#include <iostream>
+using namespace std;
 
-int prodhimi(int m){
-	int prodhimi = 1;
-	for(int i=1; i<=m; i++){//kjo llogaritet psh
-		prodhimi*=i;
-	}
-	return prodhimi;
+// Funksioni që llogarit shumën e numrave nga 1 deri në n
+int shuma(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) { //loop i cili do perseri per shumen dhe fillon nga 1
+        sum += i;
+    }
+    return sum;
 }
-int main(){
-	int a;
-	cout<<"vendos nje vlere "<<endl;
-	cin>>a;
-	cout<<"prodhimi juaj eshte "<<prodhimi(a)<<endl;
-	
-	return 0;
+
+int main() {
+    int a;
+    cout << "Vendos nje numer: ";
+    cin >> a;
+    
+    cout << "Shuma e numrave nga 1 deri ne " << a << " eshte: " << shuma(a) << endl;
+    
+    return 0;
 }
+
+

@@ -1,95 +1,65 @@
-//ndertoni funksionin i cili lexon nga 1-n numra nga useri dhe perdor funksionet per te gjetur  dhe afishuar shumen dhe prodhimin
+//funksionet
 #include<iostream>
 using namespace std;
-/*void numra(int n){
-	int shuma =0;
-	int prodhimi=1;
-	for(int i=1; i<=n; i++){
-		prodhimi*=i;
-	}
-	for(int i=0; i<=n; i++){
-		shuma+=i;
-	}
-	cout<<"shuma eshte "<<shuma<<endl;
-		cout<<"prodhimi eshte "<<prodhimi<<endl;
-}
-int main(){
-	int x;
-	cout<<"vendos numrin"<<endl;
-	cin>>x;
-	
-	numra(x);
-}
-*
-
-//ndertoni funksionin i cili lexon nga 1-n numra nga useri dhe perdor funksionet per te gjetur  dhe afishuar shumen dhe prodhimin ****vec e vec
-int prodhimi(int n){
-	int prodhimi=1;
-	for(int i=1; i<=n; i++){
-		prodhimi*=i;
-	}
-	return prodhimi;
-}
+/*//me parameter me vlere
 int shuma(int n){
 	int shuma=0;
-	for(int i=0; i<=n; i++){
+	for(int i=1; i<=n; i++){// formula eshte s= n(n+1)/2
 		shuma+=i;
 	}
-	return shuma;
-}
-
-int main(){
-	int n;
-cout<<"vendos numrin "<<endl;
-cin>>n;
-cout<<"shuma eshte "<<shuma(n);
-cout<<"prodhimi eshte "<<prodhimi(n);
-return 0;
-}
-
-//faktoriali rekursiv
-int faktoriali(int n){
-	if(n==0||n==1){
-		return 1;
-	}
-	else{
-		return n*faktoriali(n-1);
-	}
+	return shuma; 
 }
 int main(){
-	int m;
-	cout<<"vendos numri "<<endl;
-	cin>>m;
-	cout<<"faktoriali i numrit = "<<m<< "eshte = "<<faktoriali(m)<<endl;
+int x;
+cout<<"vendos vleren qe deshiron "<<endl;
+cin>>x;
+cout<<"shuma e "<<x<<" vlerave te para eshte "<<shuma(x);
 	return 0;
 }
 
-*/
-//faktoriali interativ
-int faktoriali(int n){
-	int prodhimi=1;
-	for(int i=1; i<=n; i++){
-		prodhimi*=i;
-    }
-    return prodhimi;
-  }
-  int main() {
-    int n;
-    cout << "Vendos numrin: ";
-    cin >> n;
-    cout << "Faktoriali i numrit " << n << " eshte " << faktoriali(n) << endl;
-    return 0;
+//pa parameter me vlere
+int fuqia( ){
+	int a;
+	cout<<"vendos vleren "<<endl;
+	cin>>a;
+
+return a*a;}
+int main(){
+	cout<<"vlera e fuqise eshte "<<fuqia( );
+	return 0;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+//funksioni i cili gjen me te madhin mes dy numrave
+int nje(int a, int b){
+	int rezultat;
+	if(a<b){
+		rezultat=b;
+	}
+	else{
+		rezultat=a;
+	}
+	return rezultat;
+	}
+int main(){
+	int a,b;
+	cout<<"vendos dy vlera "<<endl;
+	cin>>a>>b;
+	cout<<"rezultati eshte "<<nje(a,b)<<endl;
+	return 0;
+}
+*/
+//paparameter pa vlere
+void numra( ){
+	for(int i=1; i<=100; i++){
+		if(i%2==0){
+			cout<<i<<endl;
+		}
+	}
+}
+int main(){
+	cout<<"100 numrat e pare cifte jane "<<endl;
+	numra( );//sepse kemi perdorur void prandaj nuk shenohet te cout
+	
+	}
+}
